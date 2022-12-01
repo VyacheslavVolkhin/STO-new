@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 
     //types-slider-box
-    if (!!$('.1types-slider-box').offset()) {
+    if (!!$('.types-slider-box').offset()) {
         $('.types-slider-box .slider').slick({
             dots: false,
             slidesToShow: 4,
