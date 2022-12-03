@@ -15,7 +15,7 @@ $(document).ready(function(){
             let dataBlock = $(this).attr('data-block');
             $('.item-tile-category[data-block].active').removeClass('active');
             $(this).addClass('active');
-            $('.categories-inner-box').slideUp(200);
+            $('.categories-inner-box').fadeOut(0);
             $('.categories-inner-box[data-block="'+dataBlock+'"]').slideDown(200);
         }
         return false;

@@ -243,9 +243,9 @@ table.tbl-main thead td:not(:last-child) {
 }
 .item-tile-main .tile-title {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 14px;
   max-height: 28px;
   position: relative;
   overflow: hidden;
@@ -1644,6 +1644,7 @@ select::-ms-expand {
   }
   .item-tile-main .tile-title {
     font-size: 11px;
+    line-height: 11px;
     max-height: 22px;
   }
 }
