@@ -257,8 +257,8 @@ table.tbl-main thead td:not(:last-child) {
   font-size: 12px;
   max-height: 26px;
 }
-.item-tile-main .tile-photo {
-  height: 158px;
+.item-tile-main .tile-photo:before {
+  padding-top: 68%;
 }
 .item-tile-print-info {
   font-size: 16px;
