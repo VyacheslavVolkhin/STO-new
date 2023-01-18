@@ -370,8 +370,8 @@ table.tbl-main {
     height: 282px;
     text-align: center;
     color: var(--clr-base);
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
     transition: all ease 0.2s;
     &:hover, &.active {
         border-color: #f5a5aa;
@@ -458,6 +458,28 @@ table.tbl-main {
     }
 }
 .frm-select {
+    &.select-main {
+        label {
+            font-size: 19.4px;
+            line-height: 22px;
+            min-height: 22px;
+            padding: 0 0 0 40px;
+            font-weight: 400;
+            &:before, &:after {
+                width: 22px;
+                height: 22px;
+                top: 0;
+                left: 0;
+                margin: 0;
+                border: 1px solid #ff0000;
+            }
+            &:after {
+                border: none;
+                background: url(../img/icons/check.png) center no-repeat;
+                background-size: 16px auto;
+            }
+        }
+    }
     &.select-round {
         input:checked~label:before {
             background-color: var(--clr-att);
@@ -956,6 +978,9 @@ select::-ms-expand {
                 color: inherit;
                 //max-width: 350px;
             }
+            a {
+                font-family: 'Proxima Nova', "Open Sans", Arial, sans-serif !important;
+            }
         }
     }
     &.tabs-delivery {
@@ -1352,6 +1377,7 @@ select::-ms-expand {
     .tab-content {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     }
     .form-outer-wrap {
         flex: 1;
@@ -1359,12 +1385,12 @@ select::-ms-expand {
     }
     .photo-outer-wrap {
         width: 350px;
-        padding-top: 35px;
+        padding: 0;
         flex-shrink: 0;
         img {
             display: block;
             width: 100%;
-            max-width: 255px;
+            max-width: 264px;
         }
     }
     .frm-title-wrap {
@@ -1417,6 +1443,16 @@ select::-ms-expand {
         padding: 0 5rem 0 0;
         margin-bottom: 4.5rem;
         max-width: 276px;
+        &.field-notitle {
+            padding-top: 32px;
+            .frm-field-price {
+                height: 44px;
+                line-height: 44px;
+                margin: 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
     }
     .frm-row-info {
         font-size: 16px;
@@ -1515,6 +1551,9 @@ select::-ms-expand {
             li {
                 padding: 0 6px;
                 margin-bottom: 12px;
+            }
+            a {
+                font-family: 'Proxima Nova', "Open Sans", Arial, sans-serif !important;
             }
         }
     }
@@ -1860,6 +1899,9 @@ select::-ms-expand {
     .calc-box {
         .frm-field {
             width: 100%;
+            &.field-notitle {
+                padding-top: 0;
+            }
         }
         .frm-field-price {
             text-align: center;
