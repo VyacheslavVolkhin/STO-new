@@ -1456,6 +1456,9 @@ select::-ms-expand {
   width: 100%;
   max-width: 264px;
 }
+.calc-box .menu a {
+  font-family: inherit !important;
+}
 .calc-box .frm-title-wrap {
   margin-bottom: 40px;
 }
