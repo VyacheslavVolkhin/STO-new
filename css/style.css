@@ -229,6 +229,7 @@ table.tbl-main thead td:not(:last-child) {
       align-items: center;
   position: relative;
   z-index: 2;
+  height: 28px;
 }
 .item-tile-main .tile-title {
   display: block;
@@ -381,7 +382,7 @@ table.tbl-main thead td:not(:last-child) {
   transition: none;
 }
 .item-tile-category-inner .tile-title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: inherit;
@@ -500,6 +501,36 @@ table.tbl-main thead td:not(:last-child) {
   line-height: inherit;
   transition: none;
 }
+.frm-select.select-att {
+  font-weight: bold;
+  color: var(--clr-base);
+}
+.frm-select.select-att label {
+  min-height: 20px;
+  line-height: 20px;
+  padding: 0 0 0 73.6px;
+  padding: 0 0 0 4.6rem;
+  font-weight: bold;
+}
+.frm-select.select-att label:before,
+.frm-select.select-att label:after {
+  width: 18px;
+  height: 18px;
+  top: 10px;
+  left: 9px;
+  margin: -9px 0 0 -9px;
+  border-radius: 3px;
+}
+.frm-select.select-att label:after {
+  background: #0076ff url(../img/icons/chk.png) center no-repeat;
+  background-size: 15px auto;
+}
+.frm-select.select-att a {
+  color: #fc0404;
+}
+.frm-select.select-att a:hover {
+  color: #da0000;
+}
 .frm-select.select-main label {
   font-size: 19.4px;
   line-height: 22px;
@@ -556,9 +587,9 @@ select.form-input {
   display: block;
   width: 100%;
   padding-right: 35px;
-  background-image: url(../img/icons/arrow-select.png);
+  background-image: url(../img/icons/arrow-select-second.svg);
   background-position: right 10px center;
-  background-size: 24px auto;
+  background-size: 32px auto;
   background-color: #fff;
   background-repeat: no-repeat;
   -moz-appearance: none;
@@ -618,8 +649,8 @@ select::-ms-expand {
   content: attr(data-hide);
 }
 .btn.button-tab-small {
-  height: 34px;
-  padding: 0 18px;
+  height: 33px;
+  padding: 0 10px;
   background: #ececec;
   border: none;
   border-radius: 10px;
@@ -890,6 +921,120 @@ select::-ms-expand {
 .order-form-box {
   margin-bottom: 128px;
   margin-bottom: 8rem;
+}
+.order-form-box.form-second .frm-field-file {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: 35px;
+}
+.order-form-box.form-second .frm-field-file .btn {
+  max-width: 100%;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #808080;
+  padding: 0 105.6px 0 20px;
+  padding: 0 6.6rem 0 20px;
+  font-size: 18px;
+  color: #808080;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.order-form-box.form-second .frm-field-file .btn:hover {
+  color: var(--clr-att);
+}
+.order-form-box.form-second .frm-field-file .btn .button-title {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  line-height: 20px;
+}
+.order-form-box.form-second .frm-field-file .btn:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/icons/attach.png) center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  margin: -12px -12px 0 0;
+  transition: all ease 0.2s;
+}
+.order-form-box.form-second .frm-select {
+  font-size: 1.125em;
+}
+.order-form-box.form-second .page-title-box {
+  margin-bottom: 96px;
+  margin-bottom: 6rem;
+}
+.order-form-box.form-second .row-select .frm-field {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-bottom: 15px;
+}
+.order-form-box.form-second .row-top .frm-field {
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+.order-form-box.form-second .frm-row-submit .btn {
+  min-width: 176px;
+  height: 35px;
+  font-size: 36.768px;
+  font-size: 2.298rem;
+}
+.order-form-box.form-second .form-outer-wrap {
+  font-size: 16px;
+  max-width: 944px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 67.2px;
+  padding-bottom: 4.2rem;
+}
+.order-form-box.form-second .form-input {
+  border-color: #808080;
+  padding-left: 32px;
+  padding-left: 2rem;
+  color: #808080;
+}
+.order-form-box.form-second textarea.form-input {
+  height: 132px;
+}
+.order-form-box.form-second .frm-field-title {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: var(--clr-base);
+  margin: 0 0 12px 0;
+}
+.order-form-box.form-second .frm-field {
+  margin-bottom: 38.4px;
+  margin-bottom: 2.4rem;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.order-form-box.form-second .frm-row,
+.order-form-box.form-second .frm-row-submit {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.order-form-box.form-second [placeholder]::-webkit-input-placeholder {
+  color: #808080;
+}
+.order-form-box.form-second [placeholder]:-moz-placeholder {
+  color: #808080;
+}
+.order-form-box.form-second [placeholder]::-moz-placeholder {
+  color: #808080;
+}
+.order-form-box.form-second [placeholder]:-ms-input-placeholder {
+  color: #808080;
 }
 .order-form-box .form-outer-wrap {
   margin-bottom: 88px;
@@ -1407,7 +1552,7 @@ select::-ms-expand {
   display: none;
 }
 .tabs-tiles-box .btn.button-tab-small {
-  font-size: 18px;
+  font-size: 16.04px;
 }
 .calc-box {
   margin-bottom: 35px;
@@ -1488,7 +1633,7 @@ select::-ms-expand {
   margin: 0 0 8px 0;
 }
 .calc-box .frm-field-price {
-  font-size: 30px;
+  font-size: 28.29px;
   line-height: 30px;
   display: block;
   margin-top: -10px;
@@ -1544,10 +1689,12 @@ select::-ms-expand {
 .calc-box .btn {
   font-size: 18px;
   padding: 0 10px;
+  font-size: 22px;
 }
 .calc-box .form-input {
   padding-left: 15px;
   font-size: 18px;
+  border-width: 0.8px;
 }
 .calc-box .tab-title {
   display: none;
@@ -1570,8 +1717,8 @@ select::-ms-expand {
   right: 10px;
   margin-top: -12px;
   transition: all ease 0.2s;
-  background: url(../img/icons/arrow-select.png) center no-repeat;
-  background-size: 100% auto;
+  background: url(../img/icons/arrow-select-second.svg) center no-repeat;
+  background-size: 32px auto;
 }
 .calc-box .tab-title.active:before {
   transform: rotate(180deg);
@@ -1608,12 +1755,12 @@ select::-ms-expand {
   margin-bottom: 20px;
 }
 .tabs-box.tabs-type-second .menu {
-  margin: 0 -6px;
+  margin: 0 -3px;
   -ms-flex-pack: center;
       justify-content: center;
 }
 .tabs-box.tabs-type-second .menu li {
-  padding: 0 6px;
+  padding: 0 3px;
   margin-bottom: 12px;
 }
 .tabs-box.tabs-type-second .menu a {

@@ -192,6 +192,7 @@ table.tbl-main {
         align-items: center;
         position: relative;
         z-index: 2;
+        height: 28px;
     }
     .tile-title {
         display: block;
@@ -344,7 +345,7 @@ table.tbl-main {
         transition: none;
     }
     .tile-title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 20px;
         font-weight: 400;
         color: inherit;
@@ -458,6 +459,37 @@ table.tbl-main {
     }
 }
 .frm-select {
+    &.select-att {
+        font-weight: bold;
+        color: var(--clr-base);
+        label {
+            min-height: 20px;
+            line-height: 20px;
+            padding: 0 0 0 4.6rem;
+            font-weight: bold;
+            &:before, &:after {
+                width: 18px;
+                height: 18px;
+                top: 10px;
+                left: 9px;
+                margin: -9px 0 0 -9px;
+                border-radius: 3px;
+            }
+            &:before {
+                
+            }
+            &:after {
+                background: #0076ff url(../img/icons/chk.png) center no-repeat;
+                background-size: 15px auto;
+            }
+        }
+        a {
+            color: #fc0404;
+            &:hover {
+                color: #fc0404 - #222;
+            }
+        }
+    }
     &.select-main {
         label {
             font-size: 19.4px;
@@ -517,9 +549,9 @@ select.form-input {
 	display: block;
 	width: 100%;
 	padding-right: 35px;
-	background-image: url(../img/icons/arrow-select.png);
+	background-image: url(../img/icons/arrow-select-second.svg);
 	background-position: right 10px center;
-    background-size: 24px auto;
+    background-size: 32px auto;
 	background-color: #fff;
 	background-repeat: no-repeat;
 	-moz-appearance: none;
@@ -584,8 +616,8 @@ select::-ms-expand {
         }
     }
     &.button-tab-small {
-        height: 34px;
-        padding: 0 18px;
+        height: 33px;
+        padding: 0 10px;
         background: #ececec;
         border: none;
         border-radius: 10px;
@@ -863,6 +895,111 @@ select::-ms-expand {
 }
 .order-form-box {
     margin-bottom: 8rem;
+    &.form-second {
+        .frm-field-file {
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+            height: 35px;
+            .btn {
+                max-width: 100%;
+                height: 35px;
+                background-color: #fff;
+                border: 1px solid #808080;
+                padding: 0 6.6rem 0 20px;
+                font-size: 18px;
+                color: #808080;
+                font-weight: 400;
+                text-transform: uppercase;
+                &:hover {
+                    color: var(--clr-att);
+                }
+                .button-title {
+                    display: block;
+                    max-width: 100%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    position: relative;
+                    overflow: hidden;
+                    height: 20px;
+                    line-height: 20px;
+                }
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    background: url(../img/icons/attach.png) center no-repeat;
+                    background-size: 100% auto;
+                    position: absolute;
+                    top: 50%;
+                    right: 26px;
+                    margin: -12px -12px 0 0;
+                    transition: all ease 0.2s;
+                }
+            }
+        }
+        .frm-select {
+            font-size: (18/16em);
+        }
+        .page-title-box {
+            margin-bottom: 6rem;
+        }
+        .row-select {
+            .frm-field {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 15px;
+            }
+        }
+        .row-top {
+            .frm-field {
+                margin-bottom: 2rem;
+            }
+        }
+        .frm-row-submit {
+            .btn {
+                min-width: 176px;
+                height: 35px;
+                font-size: 2.298rem;
+            }
+        }
+        .form-outer-wrap {
+            font-size: 16px;
+            max-width: 944px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 4.2rem;
+        }
+        .form-input {
+            border-color: #808080;
+            padding-left: 2rem;
+            color: #808080;
+        }
+        textarea.form-input {
+            height: 132px;
+        }
+        .frm-field-title {
+            font-size: (18/16em);
+            font-weight: bold;
+            color: var(--clr-base);
+            margin: 0 0 12px 0;
+        }
+        .frm-field {
+            margin-bottom: 2.4rem;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        .frm-row, .frm-row-submit {
+            margin-left: -2px;
+            margin-right: -2px;
+        }
+        [placeholder]::-webkit-input-placeholder {color: #808080;}
+        [placeholder]:-moz-placeholder {color: #808080;}
+        [placeholder]::-moz-placeholder {color: #808080;}
+        [placeholder]:-ms-input-placeholder {color: #808080;}
+    }
     .form-outer-wrap {
         margin-bottom: 5.5rem;
         padding: 25px 0;
@@ -1353,7 +1490,7 @@ select::-ms-expand {
         display: none;
     }
     .btn.button-tab-small {
-        font-size: 18px;
+        font-size: 16.04px;
     }
 }
 .calc-box {
@@ -1430,7 +1567,7 @@ select::-ms-expand {
     }
     .frm-field-price {
         display: block;
-        font-size: 30px;
+        font-size: 28.29px;
         line-height: 30px;
         display: block;
         margin-top: -10px;
@@ -1486,10 +1623,12 @@ select::-ms-expand {
         //font-size: 22px;
         font-size: 18px;
         padding: 0 10px;
+        font-size: 22px;
     }
     .form-input {
         padding-left: 15px;
         font-size: 18px;
+        border-width: 0.8px;
     }
     .tab-title {
         display: none;
@@ -1511,8 +1650,8 @@ select::-ms-expand {
             right: 10px;
             margin-top: -12px;
             transition: all ease 0.2s;
-            background: url(../img/icons/arrow-select.png) center no-repeat;
-            background-size: 100% auto;
+            background: url(../img/icons/arrow-select-second.svg) center no-repeat;
+            background-size: 32px auto;
         }
         &.active {
             &:before {
@@ -1553,10 +1692,10 @@ select::-ms-expand {
     &.tabs-type-second {
         margin-bottom: 20px;
         .menu {
-            margin: 0 -6px;
+            margin: 0 -3px;
             justify-content: center;
             li {
-                padding: 0 6px;
+                padding: 0 3px;
                 margin-bottom: 12px;
             }
             a {
