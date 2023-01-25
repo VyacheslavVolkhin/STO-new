@@ -840,7 +840,7 @@ select::-ms-expand {
   max-width: 100%;
   height: 28px;
   background-color: #fff;
-  border: 2px solid #919191;
+  border: 0.51px solid #808080;
   padding: 0 36px 0 8px;
   font-size: 16px;
   color: #808080;
@@ -901,12 +901,28 @@ select::-ms-expand {
   border-width: 2px;
   padding-left: 12px;
   font-size: 14px;
-  border-color: #d9dbda;
+  border-color: #808080;
+  color: #808080;
+}
+.popup-order-box .form-input[placeholder]::-webkit-input-placeholder {
+  color: #808080;
+}
+.popup-order-box .form-input[placeholder]:-moz-placeholder {
+  color: #808080;
+}
+.popup-order-box .form-input[placeholder]::-moz-placeholder {
+  color: #808080;
+}
+.popup-order-box .form-input[placeholder]:-ms-input-placeholder {
+  color: #808080;
 }
 .popup-order-box textarea.form-input {
   height: 146px;
   line-height: 1.1;
   padding-top: 10px;
+}
+.popup-order-box .frm-select {
+  color: #808080;
 }
 .popup-order-box .frm-select label {
   font-weight: 400;
