@@ -868,7 +868,7 @@ select::-ms-expand {
     }
     .form-input {
         height: 38px;
-        border-width: 2px;
+        border-width: 0.51px;
         padding-left: 12px;
         font-size: 14px;
         border-color: #808080;
@@ -1502,6 +1502,10 @@ select::-ms-expand {
 }
 .calc-box {
     margin-bottom: 35px;
+    .frm-title-wrap.title-main {
+        display: none;
+        text-align: center;
+    }
     .tabs-content-wrap {
         background-color: #f1f1f1;
         position: relative;
@@ -1915,24 +1919,67 @@ select::-ms-expand {
             width: 25%;
         }
     }
+    .tabs-box {
+        margin-left: -20px;
+        margin-right: -20px;
+        .menu {
+            margin-right: -4px;
+            li {
+                margin-right: 4px;
+                margin-left: 0;
+            }
+        }
+        .btn.button-tab {
+            height: 29px;
+            padding: 0 12px;
+            font-size: 12.46px;
+            border-width: 1px;
+            .button-title {
+                display: none;
+            }
+            &:before {
+                content: attr(data-title);
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                padding-bottom: 1px;
+                transition: none;
+            }
+            &.active {
+                &:before {
+                    padding-bottom: 0;
+                    border-bottom: 1px solid #f87070;
+                }
+            }
+        }
+    }
     .calc-box {
+        .frm-title-wrap {
+            display: none;
+            &.title-main {
+                display: block;
+                margin-bottom: 26px;
+            }
+        }
         .tabs-content-wrap {
             padding: 8px 0;
         }
         .tabs-nav-wrap {
-            display: none;
+            //display: none;
         }
         .tab-block {
-            display: block;
+            //display: block;
         }
         .tab-content {
-            display: none;
-            padding: 15px 0 40px 0;
-            border-bottom: 1px solid #e4e2e2;
-            margin-bottom: 40px;
+            padding-bottom: 20px;
+            //display: none;
+            //padding: 15px 0 40px 0;
+            //border-bottom: 1px solid #e4e2e2;
+            //margin-bottom: 40px;
+            display: block;
         }
         .tab-title {
-            display: block;
+           // display: block;
         }
         .frm-field {
             width: 33.33%;
@@ -1942,11 +1989,7 @@ select::-ms-expand {
         .frm-row {
             margin-right: -10px;
         }
-        .frm-title-wrap {
-            .frm-title {
-                font-size: 16px;
-            }
-        }
+        
         .frm-field {
             margin-bottom: 30px;
         }
@@ -2113,6 +2156,12 @@ select::-ms-expand {
     }
 }
 @media (max-width: 479px) {
+    .page-title-box {
+        margin-bottom: 26px;
+        .page-title {
+            font-size: 16px;
+        }
+    }
     .requirements-box {
         .action-wrap {
             .btn {
@@ -2148,8 +2197,35 @@ select::-ms-expand {
         }
     }
     .categories-inner-box {
+        .info-wrap {
+            font-size: 8.74px;
+            line-height: 12.56px;
+        }
+        .items-wrap {
+            padding: 0 18px;
+        }
         .item-wrap {
-            width: 100%;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        .item-tile-category-inner {
+            height: 180px;
+            .tile-photo {
+                height: 140px;
+            }
+            .tile-info-wrap {
+                padding: 6px;
+            }
+            .tile-title {
+                font-size: 9.9px;
+                line-height: 11px;
+                margin: 0;
+            }
+            .tile-action {
+                font-size: 9.9px;
+                line-height: 11px;
+                margin: 0;
+            }
         }
     }
     .categories-tiles-box {
@@ -2157,9 +2233,93 @@ select::-ms-expand {
             width: 100%;
         }
     }
+    .calc-box {
+        .frm-title-wrap {
+            .frm-title {
+                font-size: 16px;
+            }
+        }
+        .frm-field-price {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .frm-row-info {
+            font-size: 8.74px;
+            line-height: 12px;
+            p {
+                margin-bottom: 5px;
+            }
+        }
+        .form-input + .frm-select {
+            margin-top: 10px;
+        }
+        .frm-select {
+            label {
+                font-size: 16px;
+            }
+        }
+        .frm-field {
+            margin-bottom: 20px;
+        }
+        .frm-field-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .form-input {
+            height: 37px;
+            padding-left: 9px;
+            font-size: 16px;
+        }
+        .btn {
+            height: 38px;
+            font-size: 16px;
+        }
+    }
     .tiles-box {
         .item-wrap {
-            width: 100%;
+            width: 50%;
+            margin-bottom: 7px;
+        }
+        .more-action-wrap {
+            padding-top: 26px;
+        }
+        .btn.button-more {
+            height: 20px;
+            line-height: 1;
+            padding: 0 22px 0 10px;
+            font-size: 11.36px;
+            min-width: 120px;
+            &:before {
+                width: 12px;
+                height: 6px;
+                margin-top: -3px;
+                right: 3px;
+                margin-right: 0;
+                top: 50%;
+                background-size: 100% auto;
+            }
+        }
+    }
+    .more-action-wrap {
+    }
+    .item-tile-main {
+        .tile-info-wrap {
+            height: 18px;
+        }
+        .tile-price-wrap {
+            height: 18px;
+            line-height: 18px;
+            width: 48px;
+            font-size: 7.62px;
+        }
+        .tile-title-wrap {
+            max-width: calc(100% - 48px);
+            height: 18px;
+            line-height: 18px;
+        }
+        .tile-title {
+            font-size: 7.62px;
+            line-height: 8px;
         }
     }
 }
@@ -2176,7 +2336,7 @@ select::-ms-expand {
                 letter-spacing: normal;
                 padding-left: 15px;
                 padding-right: 15px;
-                font-size: 22.98px;
+                font-size: 20.8px;
             }
         }
     }
