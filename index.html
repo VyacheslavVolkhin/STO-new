@@ -1391,7 +1391,7 @@
 									<!--/item wrap-->
 								</div>
 								<div class="more-action-wrap">
-									<a href="" class="btn button-more" data-show="смотреть больше" data-hide="вернуться"></a>
+									<a href="" class="btn button-more js-more-hidden" data-show="смотреть больше" data-hide="вернуться"></a>
 								</div>
 								<div class="info-wrap">
 									*Если в блоке отсутствует необходимый размер, вы можете выбрать тот, что больше и написать в коментариях необходимый вам точный.
@@ -1585,7 +1585,7 @@
 									<!--/item wrap-->
 								</div>
 								<div class="more-action-wrap">
-									<a href="" class="btn button-more" data-show="смотреть больше" data-hide="вернуться"></a>
+									<a href="" class="btn button-more js-more-hidden" data-show="смотреть больше" data-hide="вернуться"></a>
 								</div>
 								<div class="info-wrap">
 									*Если в блоке отсутствует необходимый размер, вы можете выбрать тот, что больше и написать в коментариях необходимый вам точный.
@@ -1764,7 +1764,7 @@
 									<!--/item wrap-->
 								</div>
 								<div class="more-action-wrap">
-									<a href="" class="btn button-more" data-show="смотреть больше" data-hide="вернуться"></a>
+									<a href="" class="btn button-more js-more-hidden" data-show="смотреть больше" data-hide="вернуться"></a>
 								</div>
 								<div class="info-wrap">
 									*Если в блоке отсутствует необходимый размер, вы можете выбрать тот, что больше и написать в коментариях необходимый вам точный.
@@ -1853,7 +1853,7 @@
 									<!--/item wrap-->
 								</div>
 								<div class="more-action-wrap">
-									<a href="" class="btn button-more" data-show="смотреть больше" data-hide="вернуться"></a>
+									<a href="" class="btn button-more js-more-hidden" data-show="смотреть больше" data-hide="вернуться"></a>
 								</div>
 								<div class="info-wrap">
 									*Если в блоке отсутствует необходимый размер, вы можете выбрать тот, что больше и написать в коментариях необходимый вам точный.
@@ -2129,6 +2129,9 @@
 									</div>
 									<div class="tab-content js-tab-content">
 										<p>Наша типография доставляет заказы в день готовности тиража. Время, которое придётся затратить на изготовление заказанной вами продукции, зависит от сложности работы. Сроки заранее оговариваются с менеджером — вы будете знать, в какой из дней вам ждать звонка от сотрудника компании. В день готовности печатной продукции мы дополнительно связываемся с клиентом и вновь оговариваем условия доставки. <br>В течение суток вы получите свой заказ.</p>
+										<div class="action-wrap">
+											<a href="" class="btn">Оформить доставку</a>
+										</div>
 									</div>
 								</div>
 								<div class="info-tab-block js-tab-block text-small" data-tab="tab-del01">
@@ -2250,6 +2253,9 @@
 									</div>
 									<div class="tab-content js-tab-content">
 										<p>Заказы доставляются бесплатно пешим курьером в районе станции метро «Павелецкая» и «Новокузнецкая». <br>Если ваш офис расположен поблизости или вы готовы сами подъехать к метро, чтобы забрать заказ, не упустите возможность экономить на доставке!</p>
+										<div class="action-wrap">
+											<a href="" class="btn">Оформить доставку</a>
+										</div>
 									</div>
 								</div>
 								<div class="info-tab-block js-tab-block text-small" data-tab="tab-del03">
@@ -2634,6 +2640,57 @@
 				</div>
 			</div>
 			<!--/popup-->
+			
+			
+			
+			
+			<!--popup order-->
+			<div class="popup-box fancybox-content" id="popup-order" style="display: block;margin: 0 auto;">
+				<div class="popup-title-wrap">
+					<div class="popup-title main-title">ОСТАВИТЬ ЗАЯВКУ</div>
+				</div>
+				<div class="popup-content-wrap">
+					<form data-bf-tooltip="top right" data-bf-config="order" action="" enctype="multipart/form-data" class="frm-popup">
+						<div class="frm-row">
+							<div class="frm-field field-third">
+								<input type="text" name="name" class="form-input" placeholder="Ваше имя">
+							</div>
+							<div class="frm-field field-third">
+								<input type="tel" name="phone" class="form-input" placeholder="Ваш телефон">
+							</div>
+							<div class="frm-field field-third">
+								<input type="email" name="email" class="form-input" placeholder="Ваш email">
+							</div>
+						</div>
+						<div class="frm-row">
+							<div class="frm-field">
+								<textarea class="form-input" name="comment" placeholder="Информация о заказе"></textarea>
+							</div>
+						</div>
+						<div class="frm-row">
+							<div class="frm-field field-file">
+								<div class="frm-field-file js-field-file">
+									<input name="file" type="file">
+									<a href="" class="btn-file js-file-button">Прикрепить файл</a>
+									<div class="file-caption js-file-caption"></div>
+								</div>
+							</div>
+						</div>
+						<div class="frm-row-submit">
+							<div class="submit-info">
+								<div class="frm-select">
+									<input type="checkbox" name="PrivacyPolicy" id="orderChBoxPopup" checked="">
+									<label for="orderChBoxPopup" class="lab_agree">Согласен на <a href="/politika-konfidencialnosti/" target="_blank">обработку персональных данных</a></label>
+								</div>
+							</div>
+							<div class="submit-button">
+								<button type="submit" class="btn">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--/popup order-->
 			
 		</div>
 
