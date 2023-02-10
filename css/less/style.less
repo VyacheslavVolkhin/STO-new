@@ -2055,6 +2055,7 @@ select::-ms-expand {
     }
 }
 @media (max-width: 767px) {
+    
     .tbl-outer-wrap {
         margin-left: -20px;
         margin-right: -20px;
@@ -2073,6 +2074,9 @@ select::-ms-expand {
         font-size: 14px;
     }
     .info-tiles-tabs-box {
+        .action-wrap {
+            text-align: center;
+        }
         .tabs-outer-wrap {
             display: none;
         }
@@ -2083,8 +2087,11 @@ select::-ms-expand {
         .tab-content {
             display: block;
         }
-        .info-tab-block {
-            display: block;
+        .info-tab-block, .info-tab-block.active {
+            display: none;
+            &:last-child {
+                display: block;
+            }
         }
         .text-tab-block {
             display: block;

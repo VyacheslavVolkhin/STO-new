@@ -2090,6 +2090,9 @@ select::-ms-expand {
   table.tbl-main {
     font-size: 14px;
   }
+  .info-tiles-tabs-box .action-wrap {
+    text-align: center;
+  }
   .info-tiles-tabs-box .tabs-outer-wrap {
     display: none;
   }
@@ -2100,7 +2103,12 @@ select::-ms-expand {
   .info-tiles-tabs-box .tab-content {
     display: block;
   }
-  .info-tiles-tabs-box .info-tab-block {
+  .info-tiles-tabs-box .info-tab-block,
+  .info-tiles-tabs-box .info-tab-block.active {
+    display: none;
+  }
+  .info-tiles-tabs-box .info-tab-block:last-child,
+  .info-tiles-tabs-box .info-tab-block.active:last-child {
     display: block;
   }
   .info-tiles-tabs-box .text-tab-block {
